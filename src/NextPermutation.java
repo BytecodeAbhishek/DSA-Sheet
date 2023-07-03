@@ -17,6 +17,8 @@ public class NextPermutation {
                  break;
              }
          }
+         // if breaking condition is not found that means that the current permutation
+        // is the last so jst reverse the array
          if(index1 == -1){
              reverse(nums,0);
          }
@@ -31,6 +33,7 @@ public class NextPermutation {
              }
              // Step 3 swap the index 1 and 2 elements
              swap(nums, index1, index2);
+             //Step 4 reverse the array after index+1
              reverse(nums, index1 + 1);
          }
     }
